@@ -81,7 +81,7 @@ int main(){
             } 
         }
 
-        cout << "test demo" << endl;
+        
         for(int i=4;i<=maxfd;i++){
             if(FD_ISSET(i,&tempfds)){
                 
@@ -101,7 +101,7 @@ int main(){
                     }
                     continue;
                 }
-                printf("[%s:%d]:%s",inet_ntoa(cin_arr[i].sin_addr),ntohs(cin_arr[i].sin_port),buf);
+                printf("[%s:%d]:%s\n",inet_ntoa(cin_arr[i].sin_addr),ntohs(cin_arr[i].sin_port),buf);
 
                 strcat(buf,"*v*");
                 if(send(i,buf,sizeof(buf),0)==-1){
