@@ -66,6 +66,8 @@ int main(){
             return -1;
         }
         //执行到现在，集合中必定有触发的文件描述符,进行判断
+
+        
         if(FD_ISSET(sfd,&tempfds)){
             newfd = accept(sfd,(sockaddr*)&cin,&socklen);
             if(newfd==-1){
@@ -118,5 +120,4 @@ int main(){
     close(sfd);
 
     return 0;
-
 }
